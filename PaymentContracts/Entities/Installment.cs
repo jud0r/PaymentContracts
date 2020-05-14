@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace PaymentContracts.Entities
 {
@@ -13,6 +11,11 @@ namespace PaymentContracts.Entities
         {
             DueDate = dueDate;
             Amount = amount;
+        }
+
+        public override string ToString()
+        {
+            return DueDate.ToString("dd/MM/yyyy") + " - " + Amount;
         }
     }
 }
